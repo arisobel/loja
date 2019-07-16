@@ -347,10 +347,10 @@ function Events11() { // cantina.journals.pagamentos
 			var tot_deb=0;
 			ds.each(function(ds){
 				deb = ds.total.value;
-				
+				alert(ds.id.value + ' ' + deb);
 				ds.edit();			
 				if(saldo>=deb){
-					alert(ds.id.value + ' ' + deb);
+					
 					ds.saldo.value = 0;
 					ds.pago.value = deb;
 				}else if(saldo<deb){
